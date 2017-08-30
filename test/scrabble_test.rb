@@ -9,5 +9,5 @@ class ScrabbleTest < Minitest::Test
     skip
     assert_equal 1, Scrabble.new.score("a")
     assert_equal 4, Scrabble.new.score("f")
-  end
+  
 end
