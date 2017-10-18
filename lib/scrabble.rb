@@ -1,11 +1,25 @@
+require "pry"
 class Scrabble
 
-  def score(word)
-    1
+
+  def score(word = nil)
+    if word == nil || word == ""
+      0
+    elsif
+      letters = word.upcase.split("")
+      letter_value = letters.map do |letter|
+      point_values.values_at(letter)[0]
+      end
+       points = letter_value.sum
+    end
+  end
+
+  def score_with_multipliers(word, letter_value)
+    
   end
 
   def point_values
-    {
+     {
       "A"=>1, "B"=>3, "C"=>3, "D"=>2,
       "E"=>1, "F"=>4, "G"=>2, "H"=>4,
       "I"=>1, "J"=>8, "K"=>5, "L"=>1,
@@ -16,3 +30,6 @@ class Scrabble
     }
   end
 end
+
+#.gsub(/([A-Z, 0-9])/, point_values).to_i
+#.values_at()[]
